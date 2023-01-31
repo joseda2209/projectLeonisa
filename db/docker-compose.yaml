@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  projectLeonisa_DB:
+    image: postgres:latest
+    container_name: postgres_projectLeonisa
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./temp/postgres/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=projectLeonisa
+      - POSTGRES_USER=projectLeonisa
+      - POSTGRES_PASSWORD=123456
