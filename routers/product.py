@@ -21,7 +21,7 @@ def get_products(db: Session = Depends(get_db)) :
     return JSONResponse(status_code=200, content=jsonable_encoder(result))
 
 @product_router.get('/product/{id_product}')
-def get_one_person(
+def get_one_product(
     id_product: str = Path(
         ...,
         title = 'idProducto',
